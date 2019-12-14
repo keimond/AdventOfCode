@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import ast
 
 with open('input', 'r') as input:

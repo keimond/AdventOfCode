@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-
 with open('input', 'r') as input:
     data = input.read().rstrip('\n').split('-')
 

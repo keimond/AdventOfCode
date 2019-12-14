@@ -1,5 +1,3 @@
-#!/bin/env python3
-
 import math
 
 total = float(0)
