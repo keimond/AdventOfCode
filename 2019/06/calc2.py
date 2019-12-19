@@ -16,21 +16,26 @@ for pair in data:
     arrayR.update({ pair[1]: pair[0] })
 
 def followPath(sat):
-    ltotal = 0
-    global arrayR,total
+    l = []
     while sat != 'COM':
-        ltotal += 1
-        total += 1
+        l.append(sat)
         sat = arrayR[sat]
+    return(l)
 
-satList = []
+l1 = followPath('YOU')
+l2 = followPath('SAN')
 
-for x in data:
-    for y in x:
-        if y not in satList and y != 'COM':
-            satList.append(y)
-    
-for x in satList:
-    followPath(x)
+for x in l1:
+  if x in l2:
+    match = x
+  else:
+    total += 1
 
-print('Total: {}'.format(total))
+for x in l2:
+  if x in l1:
+    break
+  else:
+    total += 1
+
+
+print('Total: {}'.format(total - 2))
